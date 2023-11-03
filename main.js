@@ -29,7 +29,7 @@ const addZero = (num) => {
 
 const chrismasCounter = () => {
   const dateNow = new Date().getTime();
-  const dateTo = new Date("December 25 2021, 00:00:00").getTime();
+  const dateTo = new Date(`December 25 ${(new Date()).getFullYear()}, 00:00:00`).getTime();
   const difference = dateTo - dateNow;
   const days = addZero(Math.floor(difference / (1000 * 60 * 60 * 24)));
   const hours = addZero(
